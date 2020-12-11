@@ -1,0 +1,16 @@
+.input {
+    margin: 10px;
+}
+
+#calTitle {
+    text-align: center;
+}
+
+.inputBox {
+    margin: 10px;
+}
+
+.expense {
+    text-align: right;
+    margin-right: 45px;
+}

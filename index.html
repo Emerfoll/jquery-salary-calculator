@@ -13,40 +13,42 @@
     <title>Week 7 Weekend Project</title>
     <meta name="description" content="jquery-salary-calculator">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Should have a title at the top with a name that gives an idea of its use. -->
 
-    <h1>Employee Salary Calculator</h1>
+    <h1 id="calTitle">Employee Salary Calculator</h1>
 
     <!-- Need input fields to add employeeName/ID/salary/jobTitle. -->
-
-    <input id="firstName" type="text">
-    <input id="lastName" type="text">
-    <input id="employeeID" type="text">
-    <input id="jobTitle" type="text">
-    <input id="annualSalary" type="text">
+    <div class="container input form-floating col">
+        <input id="firstNameIn" type="text" placeholder="First Name">
+        <input id="lastNameIn" type="text" placeholder="Last Name">
+        <input id="employeeIDIn" type="text" placeholder="Employee ID">
+        <input id="jobTitleIn" type="text" placeholder="Job Title">
+        <input id="annualSalaryIn" type="text" placeholder="Annual Salary">
+    </div>
 
     <!-- Table to display the information entered into the input fields. -->
-
-    <table>
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>ID</th>
-                <th>Job Title</th>
-                <th>Annual Salary</th>
-                <th>Remove</th>
-            </tr>
-        </thead>
-    </table>
-
+    <div class="container">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID</th>
+                    <th>Job Title</th>
+                    <th>Annual Salary</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
     <!-- Need a total Monthly cost that adds up how much annual salary costs each month. -->
 
-
+    <h3 class="expense">Total Monthly Expense: $<span id="monthlyCost">500</span> </h3>
 
 </body>
 
