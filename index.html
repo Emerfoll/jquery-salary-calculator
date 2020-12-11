@@ -23,14 +23,16 @@
     <h1 id="calTitle">Employee Salary Calculator</h1>
 
     <!-- Need input fields to add employeeName/ID/salary/jobTitle. -->
-    <div class="container input form-floating col">
-        <input id="firstNameIn" type="text" placeholder="First Name">
-        <input id="lastNameIn" type="text" placeholder="Last Name">
-        <input id="employeeIDIn" type="text" placeholder="Employee ID">
-        <input id="jobTitleIn" type="text" placeholder="Job Title">
-        <input id="annualSalaryIn" type="text" placeholder="Annual Salary">
 
-        <button id="addEmployee">Add Employee</button>
+    <h3>Add Employee</h3>
+    <div class="container form-floating col">
+        <input id="firstNameIn" type="text" placeholder="First Name" class="input">
+        <input id="lastNameIn" type="text" placeholder="Last Name" class="input">
+        <input id="employeeIDIn" type="text" placeholder="Employee ID" class="input">
+        <input id="jobTitleIn" type="text" placeholder="Job Title" class="input">
+        <input id="annualSalaryIn" type="text" placeholder="Annual Salary" class="input">
+
+        <button type="button" id="addEmployeeButton" class="btn btn-primary">Add Employee</button>
     </div>
 
     <!-- Table to display the information entered into the input fields. -->
@@ -46,6 +48,9 @@
                     <th>Remove</th>
                 </tr>
             </thead>
+            <tbody id="newEmployee">
+                <!-- place new employees added here -->
+            </tbody>
         </table>
     </div>
     <!-- Need a total Monthly cost that adds up how much annual salary costs each month. -->

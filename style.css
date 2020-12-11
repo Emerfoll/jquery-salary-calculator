@@ -1,5 +1,5 @@
 .input {
-    margin: 10px;
+    margin: 5px;
 }
 
 #calTitle {
@@ -8,6 +8,10 @@
 
 .inputBox {
     margin: 10px;
+}
+
+#addEmployeeButton {
+    margin: 5px;
 }
 
 .expense {
