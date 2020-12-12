@@ -24,13 +24,13 @@
 
     <!-- Need input fields to add employeeName/ID/salary/jobTitle. -->
 
-    <h3>Add Employee</h3>
+    <h3 class="container">Add Employee</h3>
     <div class="container form-floating col">
         <input id="firstNameIn" type="text" placeholder="First Name" class="input">
         <input id="lastNameIn" type="text" placeholder="Last Name" class="input">
         <input id="employeeIDIn" type="text" placeholder="Employee ID" class="input">
         <input id="jobTitleIn" type="text" placeholder="Job Title" class="input">
-        <input id="annualSalaryIn" type="text" placeholder="Annual Salary" class="input">
+        <input id="annualSalaryIn" type="number" placeholder="Annual Salary" class="input">
 
         <button type="button" id="addEmployeeButton" class="btn btn-primary">Add Employee</button>
     </div>
@@ -55,7 +55,7 @@
     </div>
     <!-- Need a total Monthly cost that adds up how much annual salary costs each month. -->
 
-    <h3 class="expense">Total Monthly Expense: $<span id="monthlyCost">500</span> </h3>
+    <h3 class="expense">Total Monthly Expense: $<span id="monthlyCost">0.00</span> </h3>
 
 </body>
 

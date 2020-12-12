@@ -1,13 +1,9 @@
-.input {
-    margin: 5px;
-}
-
 #calTitle {
     text-align: center;
 }
 
-.inputBox {
-    margin: 10px;
+.input {
+    margin: 5px;
 }
 
 #addEmployeeButton {
