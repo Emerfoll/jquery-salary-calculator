@@ -8,9 +8,9 @@ function readyNow() {
     renderToDom();
 
     $('#addEmployeeButton').on('click', addEmployee);
-}
+    $('#newEmployee').on('click', '.remove', removeEmployee);
 
-let monthlyCost = 0;
+}
 
 let employees = [
     {
@@ -18,14 +18,14 @@ let employees = [
         lastName: 'Fox',
         ID: 87425,
         title: 'Trickster',
-        salary: 1000,
+        salary: 12000,
     },
     {
         firstName: 'Bob',
         lastName: 'Loblaw',
         ID: 5068,
         title: 'Trickster',
-        salary: 1200,
+        salary: 12000,
     }
 ];
 
@@ -41,7 +41,7 @@ function renderToDom() {
              <td>${employee.ID}</td>
              <td>${employee.title}</td>
              <td>$${employee.salary}</td>
-             <td><button id="remove" class="btn btn-danger">Remove</button></td>
+             <td><button id="${employee.ID}" class="btn btn-danger remove">Remove</button></td>
 
              </tr>`)
 
@@ -91,8 +91,17 @@ function clearInputs() {
     $('#annualSalaryIn').val('');
 }
 
+function removeEmployee() {
+    console.log('Employee Fired');
+    
+}
+
+
+
 // Calculate Total Monthly Expense.
 function calculateMonthlyCost() {
+    let monthlyCost = 0;
+
     for (let monthPay of employees) {
         monthlyCost += Number(monthPay.salary);
     } monthlyCost = monthlyCost / 12;
