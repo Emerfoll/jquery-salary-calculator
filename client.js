@@ -18,14 +18,14 @@ let employees = [
         lastName: 'Fox',
         ID: 87425,
         title: 'Trickster',
-        salary: 12000,
+        salary: 100000,
     },
     {
         firstName: 'Bob',
         lastName: 'Loblaw',
         ID: 5068,
         title: 'Trickster',
-        salary: 12000,
+        salary: 120000,
     }
 ];
 
@@ -91,6 +91,8 @@ function clearInputs() {
     $('#annualSalaryIn').val('');
 }
 
+// delete and recalculate the Total Monthly Expense.
+
 function removeEmployee() {
     console.log('Employee Fired');
     $(this).parent().parent().remove();
@@ -114,6 +116,10 @@ function calculateMonthlyCost() {
     let total = $('#monthlyCost');
     total.empty();
     total.append(Math.ceil(monthlyCost));
-
+    if ( monthlyCost >= 20000) {
+        $('#monthlyCost').addClass("overBudget")
+    } else if (monthlyCost < 20000) {
+        $('#monthlyCost').removeClass('overBudget')
+    }
     console.log('monthlyCost');
 }
