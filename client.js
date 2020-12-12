@@ -33,15 +33,15 @@ function renderToDom() {
     //clear display 
     $('#newEmployee').empty();
     //use everything in the array, and append them accordingly
-    for (let employee of employees) {
+    for (let i=0; i<employees.length; i++) {
         $('#newEmployee').append(`
             <tr class="employee">
-             <td>${employee.firstName}</td>
-             <td>${employee.lastName}</td>
-             <td>${employee.ID}</td>
-             <td>${employee.title}</td>
-             <td>$${employee.salary}</td>
-             <td><button id="${employee.ID}" class="btn btn-danger remove">Remove</button></td>
+             <td>${employees[i].firstName}</td>
+             <td>${employees[i].lastName}</td>
+             <td>${employees[i].ID}</td>
+             <td>${employees[i].title}</td>
+             <td>$${employees[i].salary}</td>
+             <td><button id="${[i]}" class="btn btn-danger remove">Remove</button></td>
 
              </tr>`)
 
@@ -93,6 +93,12 @@ function clearInputs() {
 
 function removeEmployee() {
     console.log('Employee Fired');
+    $(this).parent().parent().remove();
+
+    let value = this.id
+
+    employees.splice(value , 1)
+    calculateMonthlyCost();
     
 }
 
