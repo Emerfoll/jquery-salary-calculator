@@ -69,6 +69,7 @@ function addEmployee() {
 
     // Don't allow entry if they're are empty input fields.
     if (!firstName || !lastName || !employeeID || !job || !salary) {
+        $('.input').addClass("requireInput")
         console.log('Please fill all boxes');
     } // If input fields are filled, create an object to push to the employees array.
     else {
@@ -86,6 +87,7 @@ function addEmployee() {
         clearInputs();
         // Re-apply what is on the DOM
         renderToDom();
+        $('.input').removeClass("requireInput")
     }
 }
 
@@ -120,11 +122,15 @@ function calculateMonthlyCost() {
         monthlyCost += Number(monthPay.salary);
     } // Find monthly cost based off yearly salary.
     monthlyCost = monthlyCost / 12;
+
+    // Update the DOM.
     let total = $('#monthlyCost');
     //Empty current monthly cost.
     total.empty();
     //Insert new updated monthly cost.
     total.append(Math.ceil(monthlyCost));
+
+
     //If monthly cost is over 20k, add red background.
     if (monthlyCost >= 20000) {
         $('#monthlyCost').addClass("overBudget")
